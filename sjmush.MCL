@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on 2012年 二月 11日 星期六, 上午 10:32 -->
+<!-- MuClient version 4.77 -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+<muclient>
+<world
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+
+   auto_say_override_prefix="-"
+   auto_say_string="say "
+   chat_name="Name-not-set"
+   command_stack_character=";"
+   id="a86af08cefeb05e106f5eec7"
+   input_font_name="宋体"
+   name="pkuxkx_2011"
+   new_activity_sound="(No sound)"
+   output_font_name="宋体"
+   script_editor="D:\MUSHClient\SciTE\SciTE.exe"
+   script_filename="E:\MUSHClient\worlds\pkuxkx\outfile\pkuxkx2012_v20120211\pkuxkx_2012.lua"
+   script_language="Lua"
+   site="pkuxkx.net"
+   spam_message="look"
+   speed_walk_prefix="#"
+   terminal_identification="mushclient"
+
+   arrows_change_history="y"
+   arrow_keys_wrap="y"
+   auto_pause="y"
+   auto_repeat="y"
+   auto_resize_minimum_lines="1"
+   auto_resize_maximum_lines="20"
+   chat_foreground_colour="red"
+   chat_background_colour="black"
+   chat_port="4050"
+   confirm_before_replacing_typing="y"
+   confirm_on_paste="y"
+   confirm_on_send="y"
+   copy_selection_to_clipboard="y"
+   default_trigger_sequence="100"
+   default_alias_sequence="100"
+   detect_pueblo="y"
+   display_my_input="y"
+   echo_colour="2"
+   echo_hyperlink_in_output_window="y"
+   enable_aliases="y"
+   enable_beeps="y"
+   enable_command_stack="y"
+   enable_scripts="y"
+   enable_timers="y"
+   enable_triggers="y"
+   enable_trigger_sounds="y"
+   history_lines="1000"
+   hyperlink_adds_to_command_history="y"
+   hyperlink_colour="#0080FF"
+   indent_paras="y"
+   input_background_colour="white"
+   input_font_height="12"
+   input_font_weight="400"
+   input_font_charset="134"
+   input_text_colour="black"
+   keypad_enable="y"
+   line_information="y"
+   log_output="y"
+   max_output_lines="50000"
+   mud_can_change_link_colour="y"
+   mud_can_change_options="y"
+   note_text_colour="#040000"
+   output_font_height="12"
+   output_font_weight="400"
+   output_font_charset="134"
+   paste_delay_per_lines="1"
+   pixel_offset="1"
+   port="8080"
+   proxy_port="1080"
+   script_reload_option="1"
+   script_errors_to_output_window="y"
+   send_file_delay_per_lines="1"
+   send_mxp_afk_response="y"
+   show_connect_disconnect="y"
+   show_italic="y"
+   show_underline="y"
+   spam_line_count="20"
+   speed_walk_delay="28"
+   tab_completion_lines="200"
+   timestamp_input_text_colour="maroon"
+   timestamp_notes_text_colour="blue"
+   timestamp_output_text_colour="white"
+   timestamp_input_back_colour="black"
+   timestamp_notes_back_colour="black"
+   timestamp_output_back_colour="black"
+   treeview_triggers="y"
+   underline_hyperlinks="y"
+   unpause_on_send="y"
+   use_custom_link_colour="y"
+   use_mxp="3"
+   warn_if_scripting_inactive="y"
+   wrap_column="120"
+   write_world_name_to_log="y"
+   > <!-- end of general world attributes -->
+
+</world>
+
+<!-- triggers -->
+
+<triggers
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+  >
+  <trigger
+   group="blocker"
+   keep_evaluating="y"
+   match="(&gt;)*( )*(孟健雄一把|虚通伸手|常赫志|校尉|石双英|蒋四根|采花子|宋远桥|虚明伸手|虚通|亲兵|鳌府侍卫|常伯志飞身|徐天宏长刀一摆，|鳌拜|守军|衙役|陆菲青|官兵们|周仲英|安健刚一把|杨成协|虚明|管家|绿萼|周绮|卫春华|劳德诺|陆大有|摘星子|出尘子伸手|江百胜|赵半山笑嘻嘻地)(喝道：「威|拦住了|伸手拦住你|白了你一眼道|满脸堆笑地走过来说|拦住你说道：后面是本派重地|你的经验不够，还是不要进去)\w*"
+   name="blocker_npc"
+   regexp="y"
+   script="blocked.npcblock"
+   sequence="10"
+   variable="blocker_npc"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^#(\d*)/(\d*)"
+   name="status_onbrief"
+   regexp="y"
+   script="status_onbrief"
+   sequence="10"
+   variable="status_onbrief"
+  >
+  </trigger>
+  <trigger
+   group="blocker"
+   keep_evaluating="y"
+   match="^(&gt; |)(哎哟，你一头撞在墙上\w*|巫师的房间还是\w*|这里通向神的世界\w*|此去往东是荒郊野岭\w*|你抬头向上一望，我的妈呀\w*|前面的小树林中不时发出几声惨叫声\w*|店小二一下挡在楼梯前，白眼一翻：怎麽着，想白住啊\w*|官兵拦住了你:“闲杂人等不得上\w*|侍卫伸手拦住你说道：里面没什么好看的，\w*|清兵说道：赶快滚开\w*|王兴隆说道：“后面是我家，没事\w*|丑雕神情冷漠地拦住了你的去路\w*|你个大老爷们儿去那\w*|应天府现在防备倭寇\w*|库房重地\w*|你像无头苍蝇一样在老林子\w*|你发现前面似乎有人迹，加快了脚步赶过去\w*|巴依说: 我把阿凡提关在我的客厅里了\w*|道一说道: 你未经许可，不能\w*|童百熊说道：「你不是我日月神教弟子，来我教干什么？\w*|房间中已经有人在演习阵法，\w*|管家挡住了你：我们家老爷\w*|呼巴音手一伸，道：“这位施主，此处只有\w*|桑结伸手拦住了你，一指门旁的牌子道：“没看到牌子么？\w*|你不是全真派的,还想去白洗澡\w*|招待拦住你说：对不起，我们这里是要收费的\w*|守卫喝道：闲杂人等，不得乱闯\w*|树林太茂密了，你虽然能看见西面\w*)"
+   name="blocker_system"
+   regexp="y"
+   script="blocked.sysblock"
+   sequence="10"
+   variable="blocker_system"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt; |)(你上一个动作还没完成\w*|你现在正忙\w*|你正忙\w*|战斗中不能自杀\w*|你正忙着呢\w*)"
+   name="system_isbusy"
+   omit_from_output="y"
+   regexp="y"
+   sequence="10"
+   variable="system_isbusy"
+  >
+  </trigger>
+  <trigger
+   group="blocker"
+   keep_evaluating="y"
+   match="^(&gt; |)(你小心翼翼往前挪动，遇到艰险难行处\w*|青海湖畔美不胜收，你不由停下脚步，\w*|你不小心被什么东西绊了一下\w*|你的动作还没有完成，不能移动\w*)"
+   name="blocker_obstacle"
+   regexp="y"
+   script="blocked.obsblock"
+   sequence="10"
+   variable="blocker_obstacle"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt; |)\(\s*你上一个动作还没有完成\w*"
+   name="system_isbusy2"
+   omit_from_output="y"
+   regexp="y"
+   sequence="10"
+   variable="system_isbusy2"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt; |)\s*设定环境变量：no_more = &quot;infoend&quot;$"
+   name="system_infoend"
+   omit_from_output="y"
+   regexp="y"
+   script="system.infoend"
+   sequence="10"
+   variable="system_infoend"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt; |)\s*设定环境变量：no_more\w*"
+   name="system_busy"
+   omit_from_output="y"
+   regexp="y"
+   sequence="10"
+   variable="system_busy"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^(&gt;)*( )*(\S*)\s+=\s+(.+)"
+   name="hp_stat_findnpc"
+   regexp="y"
+   script="herenpc.idhere"
+   sequence="10"
+   variable="hp_stat_findnpc"
+  >
+  </trigger>
+  <trigger
+   group="nobody"
+   keep_evaluating="y"
+   match="^(&gt;)*( )*(这里没有这个人\w*|你要向谁求教\w*|这里没有你要攻击的\w*|你想收谁作弟子？\w*|你想杀谁\w*)"
+   name="npc_nobody"
+   omit_from_output="y"
+   regexp="y"
+   script="npc_nobody"
+   sequence="10"
+   variable="npc_nobody"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt;)*( )*你无法在战斗中专心下来\w*"
+   name="system_haltcmd"
+   regexp="y"
+   script="system.haltcmd"
+   sequence="10"
+   variable="system_haltcmd"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt;)*( )*你想[要]*收.+为弟子\w*"
+   name="system_nobody2"
+   omit_from_output="y"
+   regexp="y"
+   sequence="10"
+   variable="system_nobody2"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt;)*( )*设定环境变量：no_more = &quot;nobody&quot;$"
+   name="system_nobody"
+   omit_from_output="y"
+   regexp="y"
+   sequence="10"
+   variable="system_nobody"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt;)*( )*设定环境变量：no_more = &quot;trigrpoff (.*)&quot;$"
+   name="system_trigrpoff"
+   omit_from_output="y"
+   regexp="y"
+   script="system.trigrpoff"
+   sequence="10"
+   variable="system_trigrpoff"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^(&gt;)*( )*设定环境变量：no_more = &quot;trigrpon (.*)&quot;$"
+   name="system_trigrpon"
+   omit_from_output="y"
+   regexp="y"
+   script="system.trigrpon"
+   sequence="10"
+   variable="system_trigrpon"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="system"
+   keep_evaluating="y"
+   match="^.*(自杀有两种，您是要永远死掉\w*|你现在不忙\w*|你不忙\w*|你不忙$)"
+   name="system_nobusy"
+   omit_from_output="y"
+   regexp="y"
+   sequence="10"
+   variable="system_nobusy"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^\s*(\S+)\s*\(([a-zA-Z-]+)\)\s*：\s*(\S+)\s*有效等级：\s*(\d+)$"
+   name="status_onjifa"
+   regexp="y"
+   script="status_onjifa"
+   sequence="10"
+   variable="status_onjifa"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^【 精神 】\s*(\d+)\s*/\s*(\d+)\s*\[\s*(\d+)%\]\s*【 精力 】\s*(\d+)\s*/\s*(\d+)\s*\(\s*\+\s*(\d+)\)"
+   name="hp_stat_jing"
+   regexp="y"
+   script="hp_stat_jing"
+   sequence="10"
+   variable="hp_stat_jing"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^【 气血 】\s*(\d+)\s*/\s*(\d+)\s*\[\s*(\d+)%\]\s*【 内力 】\s*(\d+)\s*/\s*(\d+)\s*\(\s*\+\s*(\d+)\)"
+   name="hp_stat_qixue"
+   regexp="y"
+   script="hp_stat_qixue"
+   sequence="10"
+   variable="hp_stat_qixue"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^【 食物 】\s*(\d+)\s*/\s*(\d+)\s*\[(\S+)\]\s*【 潜能 】\s*(\S+)\s*"
+   name="hp_stat_food"
+   regexp="y"
+   script="hp_stat_food"
+   sequence="10"
+   variable="hp_stat_food"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^【 饮水 】\s*(\d+)\s*/\s*(\d+)\s*\[(\S+)\]\s*【 经验 】\s*(\S+)\s*"
+   name="hp_stat_water"
+   regexp="y"
+   script="hp_stat_water"
+   sequence="10"
+   variable="hp_stat_water"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^【 状态 】\s*(\S+)\w*"
+   name="hp_stat_status"
+   regexp="y"
+   script="hp_stat_status"
+   sequence="10"
+   variable="hp_stat_status"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   group="status"
+   keep_evaluating="y"
+   match="^│(\s+|□)(\S+)\s*\((\S+)\)\s+-\s*\S+\s*(\d+)\/.+│$"
+   name="status_oncha"
+   regexp="y"
+   script="status_oncha"
+   sequence="10"
+   variable="status_oncha"
+  >
+  </trigger>
+</triggers>
+
+<!-- aliases -->
+
+<aliases
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+  >
+  <alias
+   name="alias_allstop"
+   script="system.allstop"
+   match="#allstop"
+   enabled="y"
+   group="system"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_baiji"
+   script="alias_baiji"
+   match="#baiji"
+   enabled="y"
+   group="job_baiji"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_dazuo"
+   script="dazuo.alias"
+   match="#dazuo (.+)"
+   enabled="y"
+   group="dazuo"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_dazuocontinue"
+   script="dazuo.resume"
+   match="#dazuogo"
+   enabled="y"
+   group="dazuo"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_dazuostop"
+   script="dazuo.stop"
+   match="#dazuostop"
+   enabled="y"
+   group="dazuo"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_dushibi"
+   script="dushibi_alias"
+   match="#dusb"
+   enabled="y"
+   group="job_dushibi"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_fight1"
+   script="fight_alias"
+   match="#fight (\S+)$"
+   enabled="y"
+   group="job_fight"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_fight3"
+   script="hit_alias"
+   match="#hit (\S+)$"
+   enabled="y"
+   group="job_fight"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_fight2"
+   script="kill_alias"
+   match="#kill (\S+)$"
+   enabled="y"
+   group="job_fight"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_lingwu_start"
+   script="qlingwu.start"
+   match="#lingwu"
+   enabled="y"
+   group="job_lingwu"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_lingwu_continue"
+   script="qlingwu.resume"
+   match="#lwgoon"
+   enabled="y"
+   group="job_lingwu"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_lingwu_stop"
+   script="qlingwu.allstop"
+   match="#lwstop"
+   enabled="y"
+   group="job_lingwu"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_questlist"
+   script="qlist.listjob"
+   match="#qlist"
+   enabled="y"
+   group="quest"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_tuna"
+   script="tuna.alias"
+   match="#tuna (.+)"
+   enabled="y"
+   group="tuna"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_tunacontinue"
+   script="tuna.resume"
+   match="#tunago"
+   enabled="y"
+   group="tuna"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_tunastop"
+   script="tuna.stop"
+   match="#tunastop"
+   enabled="y"
+   group="tuna"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_xiulian"
+   script="xiulian_alias"
+   match="#xiulian"
+   enabled="y"
+   group="job_xiulian"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_qxuexi"
+   script="qxuexi.alias"
+   match="#xuexi (.+)"
+   enabled="y"
+   group="job_xuexi"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_path"
+   script="walk_alias"
+   match="^(\w+[-,]\w+[^:])$"
+   enabled="y"
+   group="path"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_fullpath"
+   script="Searchfullpath"
+   match="fullpath (\w+[-,]\w+[^:])$"
+   enabled="y"
+   group="path"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="aliascmd_gancheon"
+   script="Gancheon"
+   match="gancheon"
+   enabled="y"
+   group="path"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_walkquickon"
+   script="Walkquickon"
+   match="quickon"
+   enabled="y"
+   group="path"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_walkallstop"
+   script="do_walkallstop"
+   match="wkallstop"
+   enabled="y"
+   group="path"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_walk_resume"
+   script="walk_resume"
+   match="wkg"
+   enabled="y"
+   group="path"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_walk_pause"
+   script="walk_pause"
+   match="wks"
+   enabled="y"
+   group="path"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_yh"
+   script="fight.yh"
+   match="yh"
+   enabled="y"
+   group="fight"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_yi"
+   script="fight.yi"
+   match="yi"
+   enabled="y"
+   group="fight"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_yj"
+   script="fight.yj"
+   match="yj"
+   enabled="y"
+   group="fight"
+   sequence="100"
+  >
+  </alias>
+  <alias
+   name="alias_yq"
+   script="fight.yq"
+   match="yq"
+   enabled="y"
+   group="fight"
+   sequence="100"
+  >
+  </alias>
+</aliases>
+
+<!-- timers -->
+
+<timers
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+  >
+  <timer enabled="y" minute="5" second="0.00" offset_second="0.00" >
+  <send>fan</send>
+
+  </timer>
+</timers>
+
+<!-- macros -->
+
+<macros
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+  >
+
+  <macro name="up" type="send_now" >
+  <send>up</send>
+
+  </macro>
+
+  <macro name="down" type="send_now" >
+  <send>down</send>
+
+  </macro>
+
+  <macro name="north" type="send_now" >
+  <send>north</send>
+
+  </macro>
+
+  <macro name="south" type="send_now" >
+  <send>south</send>
+
+  </macro>
+
+  <macro name="east" type="send_now" >
+  <send>east</send>
+
+  </macro>
+
+  <macro name="west" type="send_now" >
+  <send>west</send>
+
+  </macro>
+
+  <macro name="examine" type="replace" >
+  <send>examine </send>
+
+  </macro>
+
+  <macro name="look" type="replace" >
+  <send>look </send>
+
+  </macro>
+
+  <macro name="page" type="replace" >
+  <send>page </send>
+
+  </macro>
+
+  <macro name="say" type="replace" >
+  <send>say </send>
+
+  </macro>
+
+  <macro name="whisper" type="replace" >
+  <send>whisper </send>
+
+  </macro>
+
+  <macro name="doing" type="send_now" >
+  <send>DOING</send>
+
+  </macro>
+
+  <macro name="who" type="send_now" >
+  <send>WHO</send>
+
+  </macro>
+
+  <macro name="drop" type="replace" >
+  <send>drop </send>
+
+  </macro>
+
+  <macro name="take" type="replace" >
+  <send>take </send>
+
+  </macro>
+
+  <macro name="F2" type="send_now" >
+  <send>yun dianhuo;perform strike.huoqiu</send>
+
+  </macro>
+
+  <macro name="F3" type="send_now" >
+  <send>perform strike.chousui</send>
+
+  </macro>
+
+  <macro name="F4" type="send_now" >
+  <send>perform strike.huoqiang</send>
+
+  </macro>
+
+  <macro name="F5" type="send_now" >
+  <send>perform strike.chousui</send>
+
+  </macro>
+
+  <macro name="F7" type="send_now" >
+  <send>yun neilisuck</send>
+
+  </macro>
+
+  <macro name="logout" type="send_now" >
+  <send>LOGOUT</send>
+
+  </macro>
+
+  <macro name="quit" type="send_now" >
+  <send>QUIT</send>
+
+  </macro>
+
+  <macro name="F1" type="send_now" >
+  <send>yun dianhuo</send>
+
+  </macro>
+
+  <macro name="F6" type="send_now" >
+  <send>yun qisuck</send>
+
+  </macro>
+</macros>
+
+<!-- variables -->
+
+<variables
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+  >
+  <variable name="add_efficiency">23920000</variable>
+  <variable name="add_efficiency1">72146</variable>
+  <variable name="add_efficiency2">211332</variable>
+  <variable name="add_efficiency3">2707804</variable>
+  <variable name="add_lianxi">6504996</variable>
+  <variable name="add_lingwu">9886957</variable>
+  <variable name="bltarget"></variable>
+  <variable name="dazuo_maxnum">15960</variable>
+  <variable name="enabled">nil</variable>
+  <variable name="exp">13930000</variable>
+  <variable name="food">0</variable>
+  <variable name="food_max">320</variable>
+  <variable name="food_stat">饥饿</variable>
+  <variable name="hubiao_TargetRoomname">临海楼</variable>
+  <variable name="hubiao_TargetRoomno">310</variable>
+  <variable name="hubiao_additional_path">west;north</variable>
+  <variable name="hubiao_address">牙山小荒地黄毛鬼,[临海楼]</variable>
+  <variable name="hubiao_npcname">余彪万</variable>
+  <variable name="hubiao_rbnums">71</variable>
+  <variable name="hubiao_starttime">1328794133</variable>
+  <variable name="hubiao_turn">6</variable>
+  <variable name="hubiao_zonestr">牙山小荒地黄毛鬼</variable>
+  <variable name="hyd_npcname">乐正友</variable>
+  <variable name="info_Window">status_window</variable>
+  <variable name="jifa_name_blade">刀法</variable>
+  <variable name="jifa_name_claw">爪法</variable>
+  <variable name="jifa_name_dodge">躲闪</variable>
+  <variable name="jifa_name_force">内功</variable>
+  <variable name="jifa_name_hand">手法</variable>
+  <variable name="jifa_name_parry">招架</variable>
+  <variable name="jifa_name_staff">杖法</variable>
+  <variable name="jifa_name_strike">掌法</variable>
+  <variable name="jifa_name_sword">剑法</variable>
+  <variable name="jifa_name_throwing">暗器</variable>
+  <variable name="jifa_sklevel_blade">575</variable>
+  <variable name="jifa_sklevel_claw">575</variable>
+  <variable name="jifa_sklevel_dodge">797</variable>
+  <variable name="jifa_sklevel_force">799</variable>
+  <variable name="jifa_sklevel_hand">799</variable>
+  <variable name="jifa_sklevel_parry">799</variable>
+  <variable name="jifa_sklevel_staff">799</variable>
+  <variable name="jifa_sklevel_strike">799</variable>
+  <variable name="jifa_sklevel_sword">799</variable>
+  <variable name="jifa_sklevel_throwing">799</variable>
+  <variable name="jifa_skname_blade">狂风刀法</variable>
+  <variable name="jifa_skname_claw">葵花爪</variable>
+  <variable name="jifa_skname_dodge">摘星功</variable>
+  <variable name="jifa_skname_force">化功大法</variable>
+  <variable name="jifa_skname_hand">摘星手</variable>
+  <variable name="jifa_skname_parry">星宿毒掌</variable>
+  <variable name="jifa_skname_staff">天山杖法</variable>
+  <variable name="jifa_skname_strike">星宿毒掌</variable>
+  <variable name="jifa_skname_sword">冥天九式</variable>
+  <variable name="jifa_skname_throwing">摘星手</variable>
+  <variable name="jing">3068</variable>
+  <variable name="jing_max">3068</variable>
+  <variable name="jing_percent">100</variable>
+  <variable name="jingli">14720</variable>
+  <variable name="jingli_jiali">0</variable>
+  <variable name="jingli_max">7360</variable>
+  <variable name="mw_status_window_windowflags">2</variable>
+  <variable name="mw_status_window_windowmode">0</variable>
+  <variable name="mw_status_window_windowx">539</variable>
+  <variable name="mw_status_window_windowy">70</variable>
+  <variable name="neili">15498</variable>
+  <variable name="neili_jiali">0</variable>
+  <variable name="neili_max">7749</variable>
+  <variable name="playerid">littleknife</variable>
+  <variable name="playername">胡小子</variable>
+  <variable name="pot">168000</variable>
+  <variable name="q_hb_path1">linzhennan-hangzhou</variable>
+  <variable name="q_hb_path2">north</variable>
+  <variable name="qixue">4501</variable>
+  <variable name="qixue_max">4501</variable>
+  <variable name="qixue_percent">100</variable>
+  <variable name="roomname">立春堂</variable>
+  <variable name="skills_level_bixue_xinfa">361</variable>
+  <variable name="skills_level_blade">373</variable>
+  <variable name="skills_level_claw">373</variable>
+  <variable name="skills_level_dodge">513</variable>
+  <variable name="skills_level_flatter">97</variable>
+  <variable name="skills_level_force">508</variable>
+  <variable name="skills_level_hand">513</variable>
+  <variable name="skills_level_hero_jianfa">162</variable>
+  <variable name="skills_level_huagong_dafa">515</variable>
+  <variable name="skills_level_hujia_daofa">35</variable>
+  <variable name="skills_level_jiuyin_shengong">76</variable>
+  <variable name="skills_level_juemen_gun">373</variable>
+  <variable name="skills_level_kuangfeng_dao">373</variable>
+  <variable name="skills_level_kuangfeng_jian">373</variable>
+  <variable name="skills_level_kuihua_zhua">373</variable>
+  <variable name="skills_level_leadership">171</variable>
+  <variable name="skills_level_literate">497</variable>
+  <variable name="skills_level_mingtian_jiushi">513</variable>
+  <variable name="skills_level_parry">513</variable>
+  <variable name="skills_level_poison">596</variable>
+  <variable name="skills_level_staff">513</variable>
+  <variable name="skills_level_strategy">116</variable>
+  <variable name="skills_level_strike">513</variable>
+  <variable name="skills_level_sword">513</variable>
+  <variable name="skills_level_throwing">513</variable>
+  <variable name="skills_level_tianshan_zhang">513</variable>
+  <variable name="skills_level_whip">0</variable>
+  <variable name="skills_level_xingxiu_duzhang">513</variable>
+  <variable name="skills_level_zhaixing_shou">513</variable>
+  <variable name="skills_level_zhaixinggong">513</variable>
+  <variable name="skills_name_bixue_xinfa">碧血心法</variable>
+  <variable name="skills_name_blade">基本刀法</variable>
+  <variable name="skills_name_claw">基本爪法</variable>
+  <variable name="skills_name_dodge">基本轻功</variable>
+  <variable name="skills_name_flatter">马屁神功</variable>
+  <variable name="skills_name_force">基本内功</variable>
+  <variable name="skills_name_hand">基本手法</variable>
+  <variable name="skills_name_hero_jianfa">英雄剑法</variable>
+  <variable name="skills_name_huagong_dafa">化功大法</variable>
+  <variable name="skills_name_hujia_daofa">胡家刀法</variable>
+  <variable name="skills_name_jiuyin_shengong">九阴神功</variable>
+  <variable name="skills_name_juemen_gun">绝门棍</variable>
+  <variable name="skills_name_kuangfeng_dao">狂风刀法</variable>
+  <variable name="skills_name_kuangfeng_jian">狂风剑法</variable>
+  <variable name="skills_name_kuihua_zhua">葵花爪</variable>
+  <variable name="skills_name_leadership">为官之道</variable>
+  <variable name="skills_name_literate">读书写字</variable>
+  <variable name="skills_name_mingtian_jiushi">冥天九式</variable>
+  <variable name="skills_name_parry">基本招架</variable>
+  <variable name="skills_name_poison">基本毒技</variable>
+  <variable name="skills_name_staff">基本杖法</variable>
+  <variable name="skills_name_strategy">兵法战策</variable>
+  <variable name="skills_name_strike">基本掌法</variable>
+  <variable name="skills_name_sword">基本剑法</variable>
+  <variable name="skills_name_throwing">基本暗器</variable>
+  <variable name="skills_name_tianshan_zhang">天山杖法</variable>
+  <variable name="skills_name_whip">基本鞭法</variable>
+  <variable name="skills_name_xingxiu_duzhang">星宿毒掌</variable>
+  <variable name="skills_name_zhaixing_shou">摘星手</variable>
+  <variable name="skills_name_zhaixinggong">摘星功</variable>
+  <variable name="skills_pot_dodge">0</variable>
+  <variable name="skills_pot_flatter">0</variable>
+  <variable name="skills_pot_force">0</variable>
+  <variable name="skills_pot_hand">0</variable>
+  <variable name="skills_pot_hero_jianfa">0</variable>
+  <variable name="skills_pot_huagong_dafa">40817</variable>
+  <variable name="skills_pot_hujia_daofa">0</variable>
+  <variable name="skills_pot_literate">45</variable>
+  <variable name="skills_pot_mingtian_jiushi">515</variable>
+  <variable name="skills_pot_parry">0</variable>
+  <variable name="skills_pot_poison">0</variable>
+  <variable name="skills_pot_staff">0</variable>
+  <variable name="skills_pot_strike">0</variable>
+  <variable name="skills_pot_sword">0</variable>
+  <variable name="skills_pot_throwing">0</variable>
+  <variable name="skills_pot_tianshan_zhang">4223</variable>
+  <variable name="skills_pot_xingxiu_duzhang">927</variable>
+  <variable name="skills_pot_zhaixing_shou">2163</variable>
+  <variable name="skills_pot_zhaixinggong">2472</variable>
+  <variable name="status">健康</variable>
+  <variable name="trbottom">665</variable>
+  <variable name="trleft">7</variable>
+  <variable name="trright">908</variable>
+  <variable name="trtop">276</variable>
+  <variable name="tuna_maxnum">7605</variable>
+  <variable name="water">0</variable>
+  <variable name="water_max">320</variable>
+  <variable name="water_stat">饥渴</variable>
+</variables>
+
+<!-- colours -->
+
+<colours
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+  >
+
+<ansi>
+
+ <normal>
+   <colour seq="1" rgb="black" />
+   <colour seq="2" rgb="maroon" />
+   <colour seq="3" rgb="green" />
+   <colour seq="4" rgb="olive" />
+   <colour seq="5" rgb="navy" />
+   <colour seq="6" rgb="purple" />
+   <colour seq="7" rgb="teal" />
+   <colour seq="8" rgb="silver" />
+
+ </normal>
+
+ <bold>
+   <colour seq="1" rgb="gray" />
+   <colour seq="2" rgb="red" />
+   <colour seq="3" rgb="lime" />
+   <colour seq="4" rgb="yellow" />
+   <colour seq="5" rgb="blue" />
+   <colour seq="6" rgb="magenta" />
+   <colour seq="7" rgb="cyan" />
+   <colour seq="8" rgb="white" />
+
+ </bold>
+
+</ansi>
+
+<custom>
+  <colour seq="1" name="Custom1" text="#FF8080" back="black" />
+  <colour seq="2" name="Custom2" text="#FFFF80" back="black" />
+  <colour seq="3" name="Custom3" text="#80FF80" back="black" />
+  <colour seq="4" name="Custom4" text="#80FFFF" back="black" />
+  <colour seq="5" name="Custom5" text="#0080FF" back="black" />
+  <colour seq="6" name="Custom6" text="#FF80C0" back="black" />
+  <colour seq="7" name="Custom7" text="red" back="black" />
+  <colour seq="8" name="Custom8" text="#0080C0" back="black" />
+  <colour seq="9" name="Custom9" text="magenta" back="black" />
+  <colour seq="10" name="Custom10" text="#804040" back="black" />
+  <colour seq="11" name="Custom11" text="#FF8040" back="black" />
+  <colour seq="12" name="Custom12" text="teal" back="black" />
+  <colour seq="13" name="Custom13" text="#004080" back="black" />
+  <colour seq="14" name="Custom14" text="#FF0080" back="black" />
+  <colour seq="15" name="Custom15" text="green" back="black" />
+  <colour seq="16" name="Custom16" text="blue" back="black" />
+
+</custom>
+</colours>
+
+<!-- keypad -->
+
+<keypad
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+  >
+
+  <key name="0" >
+  <send>localmaps</send>
+  </key>
+
+  <key name="1" >
+  <send>sw</send>
+  </key>
+
+  <key name="2" >
+  <send>south</send>
+  </key>
+
+  <key name="3" >
+  <send>se</send>
+  </key>
+
+  <key name="4" >
+  <send>west</send>
+  </key>
+
+  <key name="5" >
+  <send>look</send>
+  </key>
+
+  <key name="6" >
+  <send>east</send>
+  </key>
+
+  <key name="7" >
+  <send>nw</send>
+  </key>
+
+  <key name="8" >
+  <send>north</send>
+  </key>
+
+  <key name="9" >
+  <send>ne</send>
+  </key>
+
+  <key name="." >
+  <send>cha</send>
+  </key>
+
+  <key name="/" >
+  <send>hhh</send>
+  </key>
+
+  <key name="*" >
+  <send>yq</send>
+  </key>
+
+  <key name="-" >
+  <send>hp</send>
+  </key>
+
+  <key name="+" >
+  <send>look</send>
+  </key>
+
+  <key name="Ctrl+0" >
+  </key>
+
+  <key name="Ctrl+1" >
+  </key>
+
+  <key name="Ctrl+2" >
+  </key>
+
+  <key name="Ctrl+3" >
+  </key>
+
+  <key name="Ctrl+4" >
+  </key>
+
+  <key name="Ctrl+5" >
+  </key>
+
+  <key name="Ctrl+6" >
+  </key>
+
+  <key name="Ctrl+7" >
+  </key>
+
+  <key name="Ctrl+8" >
+  </key>
+
+  <key name="Ctrl+9" >
+  </key>
+
+  <key name="Ctrl+." >
+  </key>
+
+  <key name="Ctrl+/" >
+  </key>
+
+  <key name="Ctrl+*" >
+  </key>
+
+  <key name="Ctrl+-" >
+  </key>
+
+  <key name="Ctrl++" >
+  </key>
+</keypad>
+
+<!-- printing -->
+
+<printing
+   muclient_version="4.77"
+   world_file_version="15"
+   date_saved="2012-02-11 10:32:37"
+  >
+
+<ansi>
+
+ <normal>
+
+ </normal>
+
+ <bold>
+   <style seq="1" bold="y" />
+   <style seq="2" bold="y" />
+   <style seq="3" bold="y" />
+   <style seq="4" bold="y" />
+   <style seq="5" bold="y" />
+   <style seq="6" bold="y" />
+   <style seq="7" bold="y" />
+   <style seq="8" bold="y" />
+
+ </bold>
+
+</ansi>
+</printing>
+
+<!-- plugins -->
+<include name="E:\MUSHClient\worlds\plugins\Show_fullme_CODE_v2.20.xml" plugin="y" />
+<include name="E:\MUSHClient\worlds\plugins\Pkuxkx_mw_z_order_monitor.xml" plugin="y" />
+<include name="E:\MUSHClient\worlds\plugins\pkuxkx_layout.xml" plugin="y" />
+<include name="E:\MUSHClient\worlds\plugins\pkuxkx_chat.xml" plugin="y" />
+</muclient>
